@@ -3,7 +3,7 @@ name: Build, tests and docker
 on: [push]
 
 env:
-  IMAGE_NAME: greeting-image
+  IMAGE_NAME: Dockerfile
     
 jobs:
   build-and-test:
