@@ -17,18 +17,5 @@ jobs:
         run: mvn package -DskipTests
       - name: Build and test
         run: mvn package
-      - name: Build Docker image
-        uses: docker/build-push-action@v4
-        with:
-          context: .
-          push: false
-          tags: my-docker-image:latest
-      - name: Publish Docker image
-        uses: docker/build-push-action@v4
-        with:
-          context: .
-          push: true
-          tags: my-docker-image:latest
-        env:
-          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+      - name: Build image in docker
+      - run: docker build -t greeting-image- .
