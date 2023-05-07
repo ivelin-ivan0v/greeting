@@ -36,8 +36,8 @@ jobs:
           context: .
           push: true
           tags: |
-            ghcr.io/${{ github.repository }}/${{ env.IMAGE_NAME }}:${{ github.sha }}
-            ghcr.io/${{ github.repository }}/${{ env.IMAGE_NAME }}:latest
+             ghcr.io/${{ github.repository }}/${{ env.IMAGE_NAME }}:${{ github.sha }}
+             ghcr.io/${{ github.repository }}/${{ env.IMAGE_NAME }}:latest
           env:
             DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
             DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
